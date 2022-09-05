@@ -1,0 +1,33 @@
+import random  as rd
+def rps_game():
+    name = input("What is your name? :  ")
+    print(f"Welcome to Rock Paper Scissors game {name} !")
+    Win = 0
+    Loss = 0
+    Tie = 0
+    print(f"{name}'s score is {Win} , {Loss}, {Tie} ")
+    print("Please type R,P,S or End ")
+    while True:
+        
+        user_hand = input("Select carefully : ")
+        hand=["R", "P" "S"]
+        com_hand = rd.choice(hand)
+        if user_hand == "End":
+            print(f"Thank you for playing {name}, your score is Win : {Win}, Loss : {Loss}, Tie : {Tie}")
+            break
+        
+        if com_hand == "R" and user_hand == "P":
+            print("You Win")
+            Win +=1
+        elif com_hand == user_hand:
+            print("Tie")
+            Tie +=1
+        elif com_hand =="S" and user_hand == "R":
+            print("You Win")
+            Win +=1
+        elif com_hand == "P" and user_hand == "S":
+             print("You Win")
+             Win +=1
+        else:
+            print("You loss")
+            Loss +=1
